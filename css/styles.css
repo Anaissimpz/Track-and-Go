@@ -1,0 +1,13 @@
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+p{
+color: white;
+font-size: 24px;
+}
+h4{
+    color: brown;
+    text-align: center;
+    font-size: 30px;
+}
