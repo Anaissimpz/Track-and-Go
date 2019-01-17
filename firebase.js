@@ -9,29 +9,33 @@ var config = {
   firebase.initializeApp(config);
   var go=new Date();
   var a=go.getTime();
-  
+  var counter= a;
+
   $(document).ready(function(){
       $("form#track").submit(function(a){
           var username=$("input#username").val()
           var from=$("input#from").val()
           var to=$("input#to").val()
           var time=$("input#time").val()
+          counter +=1;
           var data={
+              Id:counter,
               Username:username,
               From:from,
               To:to,
-              Time:time
+              Time:time,
+              
           }
-          firebase.database().ref().child("book").push(data);
+          firebase.database().ref().child("book/"+counter).push(data);
       })
 
-      firebase.database().ref("names/").on("child_added", function(saf) {
+      firebase.database().ref("book/").on("child_added", function(saf) {
         saf.forEach(function(datax) {
-                  var childData = datax .val();
-                  console.log(childData.Age)
-        $('#datas').append(`<tr><th scope="row">${childData.Name}</th> 
-          <th scope="row">${childData.Email}</th> <th scope="row">${childData.Gender}</th>
-           <th scope="row">${childData.Age}</th></tr>`)
+                  var childData = datax.val();
+                console.log(childData.Username);
+        $('#datas').append(`<tr><th scope="row">${childData.Username}</th> 
+          <th scope="row">${childData.From}</th> <th scope="row">${childData.Id}</th> <th scope="row">${childData.To}</th>
+           <th scope="row">${childData.Time}</th></tr>`)
 })
       })
   })
