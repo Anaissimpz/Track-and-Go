@@ -1,12 +1,9 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
 background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcsec_S8FFbyH06E8t8QDumJi0KoiGHcV-OgP5ZosPAlMEP1I2Zw');
 background-size: cover;
 background-repeat: no-repeat;
-height: 100%;
 font-family: 'Numans', sans-serif;
 }
 
@@ -91,5 +88,59 @@ color: white;
 margin-left: 4px;
 }
 .panel-footer{
-    padding-bottom: 300px;
+    padding-bottom: 50px;
+    margin-top: 50px;
 }
+IMG{
+    position: relative;
+    top: -80px;
+}
+.navbar-default{
+    padding-top: 40px;
+    background-color: rgb(223, 205, 205);
+    font-size: 25px;
+    color: black;
+   font-style: italic;
+    }
+#bus{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+}
+#bus td, #bus th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #bus tr{
+      background-color: #f2f2f2;
+    }
+    
+    
+    #bus th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #00ace6;
+        color: white;
+      }
+      table{
+        position: relative;
+        left: -60px;
+      }
+      .form-inline{
+         position: relative;
+         left: -300px;
+         padding: 50px;
+         color: White;
+      }
+      .checkbox{
+          position: relative;
+          right: -500px;
+          padding: 20px;
+          Color:white;
+      }
+ .btn-default{
+    position: relative;
+    right: -500px;
+color:  #00ace6;
+} 
